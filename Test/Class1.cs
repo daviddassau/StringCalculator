@@ -9,8 +9,14 @@ using StringCalculator;
 
 namespace Test
 {
-    [TestFixure]
+    [TestFixture]
     public class Class1
     {
+        [Test]
+        public void Test_Method1()
+        {
+            var testInstance = new AddClass();
+            var testResult = testInstance.AddTwo(9,5);
+        }
     }
 }
