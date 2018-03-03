@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using StringCalculator;
 using NUnit.Framework;
-using StringCalculator;
 
 namespace Test
 {
@@ -15,8 +14,15 @@ namespace Test
         [Test]
         public void Test_Method1()
         {
+            // Arrange
             var testInstance = new AddClass();
-            var testResult = testInstance.AddTwo(9,5);
+
+            // Act
+            var testResult = testInstance.AddTwo(9, 5);
+
+            // Assert
+            Assert.AreEqual(14, testResult, "I expect 14");
+            
         }
     }
 }
